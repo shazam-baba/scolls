@@ -1,0 +1,128 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let prevScroll = 20;
+      let square = document.getElementById("#s");
+      window.addEventListener("scroll", () => {
+        let scroll = this.scrollY;
+        if (prevScroll > scroll) {
+          document.getElementById("s").style.transform = "translateY(0px)";
+        } else {
+          document.getElementById("s").style.transform = "translateY(40px)";
+        }
+        // prevScroll = scroll;
+        console.log(scroll);
+      });
+      
+      let viperScroll = 900;
+      let viper = document.getElementById("#v");
+      window.addEventListener("scroll", () => {
+        let vscroll = this.scrollY;
+        if (viperScroll > vscroll) {
+          document.getElementById("v").style.transform = "translate(0px,0px)";
+        } else {
+          document.getElementById("v").style.transform = "translate(40px,40px)";
+        }
+        // viperScroll = vscroll;
+        console.log(vscroll);
+      });
+
+      let omenScroll = 1900;
+      let omen = document.getElementById("#o");
+      window.addEventListener("scroll", () => {
+        let oscroll = this.scrollY;
+        if (omenScroll > oscroll) {
+          document.getElementById("o").style.transform = "translateX(40px)";
+        } else {
+          document.getElementById("o").style.transform = "translateX(80px)";
+        }
+        
+      });
+    </script>
+  </head>
+  <style>
+    body {
+      height: 1000px;
+     
+    }
+    .jett{
+        background: #44A08D;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #093637, #44A08D);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #093637, #44A08D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        display: flex;
+        height:700px;
+        margin-bottom: 400px;
+    }
+    .viper{
+        background: #000000;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #0f9b0f, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #0f9b0f, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        display: flex;
+        height:700px;
+        margin-bottom: 400px;
+    }
+    .omen{
+        background: #373B44;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #4286f4, #373B44);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #4286f4, #373B44); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        display: flex;
+        height:700px;
+        margin-bottom: 400px
+    }
+    .square2 {
+        transition: transform 0.8s;
+        width:500px;
+        
+    }
+    .text {
+        margin-top:300px;
+        width:500px;
+        position: absolute;
+        right:30%;
+        color: azure;
+    }
+    .sas{
+     margin-top: 100px;
+     height: 700px;
+    }    
+  </style>
+  <body>
+    <div class="jett">
+      <div class="square2" id="s">
+        <img class='sas' src="Jett.png" alt="" srcset="">
+      </div>
+
+      <div class="text">
+          <h1>Valorant</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem!</p>
+        </div>
+    </div>
+    <!-- ---------------------------------------------------- -->
+    <div class="viper">
+        <div class="square2" id="v">
+        <img class='sas' src="viper.png" alt="" srcset="">
+      </div>
+
+      <div class="text">
+          <h1>Valorant</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem!</p>
+        </div>
+    </div>
+    <!-- ---------------------------------------------------- -->
+    <div class="omen">
+        <div class="square2" id="o">
+        <img class='sas' src="omen.png" alt="" srcset="">
+      </div>
+
+      <div class="text">
+          <h1>Valorant</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem!</p>
+        </div>
+    </div>
+  </body>
+</html>
